@@ -4,9 +4,9 @@ class CfgPatches
     {
         units[] = {};
         weapons[] = {};
-        requiredAddons[] = {};
+        requiredAddons[] = {"A3_Structures_F_Mil_Flags"};
         version = "3.0.1";
-        author[] = {"Saltyshowmn & Jabo"};
+        author = "Saltyshowmn & Jabo";
         authorUrl = "";
     };
     class crosswind_flags_addon
@@ -20,7 +20,7 @@ class CfgPatches
         };
         weapons[] = {};
         requiredVersion = 0.1;
-        requiredAddons[] = {"A3_Structures_F_Mil_Flagpoles"};
+        requiredAddons[] = {"A3_Structures_F_Mil_Flags"};
     };
 };
 
@@ -84,66 +84,143 @@ class CfgUnitInsignia
     };
 
 };
+
+
 class CfgVehicles
 {
-    class FlagPole_F; // Base game flagpole
+    class FlagPole_F;
 
-    // First custom flag
     class CROSSWIND_FLAG: FlagPole_F
     {
-        author = "Jabo";
-        scope = 2; // 2 makes it available in the Eden Editor
-        scopeCurator = 2; // 2 makes it available in Zeus
+        author = "Saltyshowmn";
+        scope = 2;
+        scopeCurator = 2;
         displayName = "CROSSWIND Flag";
-        hiddenSelectionsTextures[] = 
+        editorCategory = "EdCat_Signs";
+        editorSubcategory = "EdSubcat_Flags";
+
+        class EventHandlers
         {
-            "\insignia_addon\icon\crosswindflag.paa" // Path to your .paa texture
+            init = "(_this select 0) setFlagTexture '\insignia_addon\icon\crosswindflag.paa'";
         };
     };
 
-    // Second custom flag
     class WESTWIND_FLAG: FlagPole_F
     {
-        author = "Jabo";
-        scope = 2; // 2 makes it available in the Eden Editor
-        scopeCurator = 2; // 2 makes it available in Zeus
+        author = "Saltyshowmn";
+        scope = 2;
+        scopeCurator = 2;
         displayName = "WESTWIND Flag";
-        hiddenSelectionsTextures[] = 
+        editorCategory = "EdCat_Signs";
+        editorSubcategory = "EdSubcat_Flags";
+
+        class EventHandlers
         {
-            "\insignia_addon\icon\westwindflag.paa" // Path to your .paa texture
+            init = "(_this select 0) setFlagTexture '\insignia_addon\icon\westwindflag.paa'";
         };
     };
+
     class CRUCIBLE_FLAG: FlagPole_F
     {
-        author = "Jabo";
-        scope = 2; // 2 makes it available in the Eden Editor
-        scopeCurator = 2; // 2 makes it available in Zeus
+        author = "Saltyshowmn";
+        scope = 2;
+        scopeCurator = 2;
         displayName = "The Crucible Flag";
-        hiddenSelectionsTextures[] = 
+        editorCategory = "EdCat_Signs";
+        editorSubcategory = "EdSubcat_Flags";
+
+        class EventHandlers
         {
-            "\insignia_addon\icon\crucibleflag.paa" // Path to your .paa texture
+            init = "(_this select 0) setFlagTexture '\insignia_addon\icon\crucibleflag.paa'";
         };
     };
+
     class TFR_FLAG: FlagPole_F
     {
-        author = "Jabo";
-        scope = 2; // 2 makes it available in the Eden Editor
-        scopeCurator = 2; // 2 makes it available in Zeus
-        displayName = "TFR Flag";
-        hiddenSelectionsTextures[] = 
+        author = "Saltyshowmn";
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "Task Force Razor Flag";
+        editorCategory = "EdCat_Signs";
+        editorSubcategory = "EdSubcat_Flags";
+
+        class EventHandlers
         {
-            "\insignia_addon\icon\razorflag.paa" // Path to your .paa texture
+            init = "(_this select 0) setFlagTexture '\insignia_addon\icon\razorflag.paa'";
         };
     };
+
     class STAG_FLAG: FlagPole_F
     {
-        author = "Jabo";
-        scope = 2; // 2 makes it available in the Eden Editor
-        scopeCurator = 2; // 2 makes it available in Zeus
+        author = "Saltyshowmn";
+        scope = 2;
+        scopeCurator = 2;
         displayName = "14th STAG Flag";
-        hiddenSelectionsTextures[] = 
+        editorCategory = "EdCat_Signs";
+        editorSubcategory = "EdSubcat_Flags";
+
+        class EventHandlers
         {
-            "\insignia_addon\icon\stagflag.paa" // Path to your .paa texture
+            init = "(_this select 0) setFlagTexture '\insignia_addon\icon\stagflag.paa'";
         };
+    };
+
+};
+
+class CfgMarkerClasses
+{
+    class Saltys_AIO_Markers
+    {
+        displayName = "Salty's AIO Logos";
+    };
+};
+
+class CfgMarkers
+{
+    class flag_Altis;
+
+    class Saltys_Crosswind_Marker: flag_Altis
+    {
+        scope = 2;
+        name = "Crosswind";
+        icon = "\insignia_addon\icon\crosswind_marker_ca.paa";
+        texture = "\insignia_addon\icon\crosswind_marker_ca.paa";
+        markerClass = "Saltys_AIO_Markers";
+    };
+
+    class Saltys_Westwind_Marker: flag_Altis
+    {
+        scope = 2;
+        name = "Westwind";
+        icon = "\insignia_addon\icon\westwind_marker_ca.paa";
+        texture = "\insignia_addon\icon\westwind_marker_ca.paa";
+        markerClass = "Saltys_AIO_Markers";
+    };
+
+    class Saltys_Crucible_Marker: flag_Altis
+    {
+        scope = 2;
+        name = "The Crucible";
+        icon = "\insignia_addon\icon\crucible_marker_ca.paa";
+        texture = "\insignia_addon\icon\crucible_marker_ca.paa";
+        markerClass = "Saltys_AIO_Markers";
+    };
+
+    class Saltys_Razor_Marker: flag_Altis
+    {
+        scope = 2;
+        name = "Task Force Razor";
+        icon = "\insignia_addon\icon\razor_marker_ca.paa";
+        texture = "\insignia_addon\icon\razor_marker_ca.paa";
+        markerClass = "Saltys_AIO_Markers";
+    };
+
+    class Saltys_STAG_Marker: flag_Altis
+    {
+        scope = 2;
+        name = "S.T.A.G.";
+        icon = "\insignia_addon\icon\stag_marker_ca.paa";
+        texture = "\insignia_addon\icon\stag_marker_ca.paa";
+        markerClass = "Saltys_AIO_Markers";
     };
 };
