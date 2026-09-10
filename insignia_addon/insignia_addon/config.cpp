@@ -1,0 +1,183 @@
+class CfgPatches
+{
+    class insignia_addon
+    {
+        units[] = {};
+        weapons[] = {};
+        requiredAddons[] = {"A3_Structures_F_Mil_Flags"};
+        version = "3.0.1";
+        author = "Saltyshowmn & Jabo";
+        authorUrl = "";
+    };
+    class crosswind_flags_addon
+    {
+        units[] = {
+            "CROSSWIND_FLAG", // Defined under CfgVehicles, has to use these names here.
+            "WESTWIND_FLAG",
+            "CRUCIBLE_FLAG",
+            "TFR_FLAG",
+            "STAG_FLAG"
+        };
+        weapons[] = {};
+        requiredVersion = 0.1;
+        requiredAddons[] = {"A3_Structures_F_Mil_Flags"};
+    };
+};
+
+class CfgUnitInsignia
+{
+    class JTFlogo
+    {
+        displayName = "JTF Patch";
+        author = "Saltyshowmn";
+        texture = "\insignia_addon\icon\JTF_Patch.paa";
+        textureVehicle = "";
+    };
+
+    class TFR_logo
+    {
+        displayName = "Task Force Razor";
+        author = "Saltyshowmn";
+        texture = "\insignia_addon\icon\Task_Force_Razor.paa";
+        textureVehicle = "";
+    };
+
+    class Crucible_logo
+    {
+        displayName = "The Crucible";
+        author = "Saltyshowmn";
+        texture = "\insignia_addon\icon\Crucible_Patch.paa";
+        textureVehicle = "";
+    };
+
+    class Ironclads_73rd
+    {
+        displayName = "73rd Ironclads";
+        author = "Saltyshowmn";
+        texture = "\insignia_addon\icon\73rd_Ironclads.paa";
+        textureVehicle = "";
+    };
+
+
+    class STAG_logo
+    {
+        displayName = "S.T.A.G.";
+        author = "Saltyshowmn";
+        texture = "\insignia_addon\icon\STAG.paa";
+        textureVehicle = "";
+    };
+
+    class Westwind_logo
+    {
+        displayName = "Westwind";
+        author = "Saltyshowmn";
+        texture = "\insignia_addon\icon\Westwind.paa";
+        textureVehicle = "";
+    };
+
+    class Crosswind_logo
+    {
+        displayName = "Crosswind";
+        author = "Saltyshowmn";
+        texture = "\insignia_addon\icon\Crosswind.paa";
+        textureVehicle = "";
+    };
+
+};
+
+
+class CfgVehicles
+{
+    class FlagPole_F;
+
+    class CROSSWIND_FLAG: FlagPole_F
+    {
+        author = "Saltyshowmn";
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "CROSSWIND Flag";
+        editorCategory = "EdCat_Signs";
+        editorSubcategory = "EdSubcat_Flags";
+
+        class EventHandlers
+        {
+            init = "(_this select 0) setFlagTexture '\insignia_addon\icon\crosswindflag.paa'";
+        };
+    };
+
+    class WESTWIND_FLAG: FlagPole_F
+    {
+        author = "Saltyshowmn";
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "WESTWIND Flag";
+        editorCategory = "EdCat_Signs";
+        editorSubcategory = "EdSubcat_Flags";
+
+        class EventHandlers
+        {
+            init = "(_this select 0) setFlagTexture '\insignia_addon\icon\westwindflag.paa'";
+        };
+    };
+
+    class CRUCIBLE_FLAG: FlagPole_F
+    {
+        author = "Saltyshowmn";
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "The Crucible Flag";
+        editorCategory = "EdCat_Signs";
+        editorSubcategory = "EdSubcat_Flags";
+
+        class EventHandlers
+        {
+            init = "(_this select 0) setFlagTexture '\insignia_addon\icon\crucibleflag.paa'";
+        };
+    };
+
+    class TFR_FLAG: FlagPole_F
+    {
+        author = "Saltyshowmn";
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "Task Force Razor Flag";
+        editorCategory = "EdCat_Signs";
+        editorSubcategory = "EdSubcat_Flags";
+
+        class EventHandlers
+        {
+            init = "(_this select 0) setFlagTexture '\insignia_addon\icon\razorflag.paa'";
+        };
+    };
+
+    class STAG_FLAG: FlagPole_F
+    {
+        author = "Saltyshowmn";
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "14th STAG Flag";
+        editorCategory = "EdCat_Signs";
+        editorSubcategory = "EdSubcat_Flags";
+
+        class EventHandlers
+        {
+            init = "(_this select 0) setFlagTexture '\insignia_addon\icon\stagflag.paa'";
+        };
+    };
+
+};
+
+class CfgMods
+{
+    class Saltys_AIO_Logos
+    {
+        dir = "insignia_addon";
+        name = "Salty's AIO Logos";
+        picture = "\insignia_addon\icon\Saltys_AIO_Logos_mod.paa";
+        hidePicture = 0;
+        hideName = 0;
+        actionName = "";
+        action = "";
+        author = "Saltyshowmn";
+    };
+};
