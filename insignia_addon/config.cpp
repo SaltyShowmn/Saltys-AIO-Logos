@@ -95,7 +95,7 @@ class CfgVehicles
         author = "Saltyshowmn";
         scope = 2;
         scopeCurator = 2;
-        displayName = "CROSSWIND Flag";
+        displayName = "Flag (Crosswind)";
         editorCategory = "EdCat_Signs";
         editorSubcategory = "EdSubcat_Flags";
 
@@ -110,7 +110,7 @@ class CfgVehicles
         author = "Saltyshowmn";
         scope = 2;
         scopeCurator = 2;
-        displayName = "WESTWIND Flag";
+        displayName = "Flag (Westwind)";
         editorCategory = "EdCat_Signs";
         editorSubcategory = "EdSubcat_Flags";
 
@@ -125,7 +125,7 @@ class CfgVehicles
         author = "Saltyshowmn";
         scope = 2;
         scopeCurator = 2;
-        displayName = "The Crucible Flag";
+        displayName = "Flag (The Crucible)";
         editorCategory = "EdCat_Signs";
         editorSubcategory = "EdSubcat_Flags";
 
@@ -140,7 +140,7 @@ class CfgVehicles
         author = "Saltyshowmn";
         scope = 2;
         scopeCurator = 2;
-        displayName = "Task Force Razor Flag";
+        displayName = "Flag (Task Force Razor)";
         editorCategory = "EdCat_Signs";
         editorSubcategory = "EdSubcat_Flags";
 
@@ -155,7 +155,7 @@ class CfgVehicles
         author = "Saltyshowmn";
         scope = 2;
         scopeCurator = 2;
-        displayName = "14th STAG Flag";
+        displayName = "Flag (14th STAG)";
         editorCategory = "EdCat_Signs";
         editorSubcategory = "EdSubcat_Flags";
 
