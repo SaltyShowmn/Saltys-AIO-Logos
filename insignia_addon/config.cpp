@@ -9,14 +9,17 @@ class CfgPatches
         author = "Saltyshowmn & Jabo";
         authorUrl = "";
     };
+
     class crosswind_flags_addon
     {
         units[] = {
-            "CROSSWIND_FLAG", // Defined under CfgVehicles, has to use these names here.
+            "CROSSWIND_FLAG",
             "WESTWIND_FLAG",
             "CRUCIBLE_FLAG",
             "TFR_FLAG",
-            "STAG_FLAG"
+            "STAG_FLAG",
+            "JEG73_FLAG",
+            "JTF_FLAG"
         };
         weapons[] = {};
         requiredVersion = 0.1;
@@ -58,7 +61,6 @@ class CfgUnitInsignia
         textureVehicle = "";
     };
 
-
     class STAG_logo
     {
         displayName = "S.T.A.G.";
@@ -82,9 +84,7 @@ class CfgUnitInsignia
         texture = "\insignia_addon\icon\Crosswind.paa";
         textureVehicle = "";
     };
-
 };
-
 
 class CfgVehicles
 {
@@ -95,7 +95,7 @@ class CfgVehicles
         author = "Saltyshowmn";
         scope = 2;
         scopeCurator = 2;
-        displayName = "Flag (Crosswind)";
+        displayName = "CROSSWIND Flag";
         editorCategory = "EdCat_Signs";
         editorSubcategory = "EdSubcat_Flags";
 
@@ -110,7 +110,7 @@ class CfgVehicles
         author = "Saltyshowmn";
         scope = 2;
         scopeCurator = 2;
-        displayName = "Flag (Westwind)";
+        displayName = "WESTWIND Flag";
         editorCategory = "EdCat_Signs";
         editorSubcategory = "EdSubcat_Flags";
 
@@ -125,7 +125,7 @@ class CfgVehicles
         author = "Saltyshowmn";
         scope = 2;
         scopeCurator = 2;
-        displayName = "Flag (The Crucible)";
+        displayName = "The Crucible Flag";
         editorCategory = "EdCat_Signs";
         editorSubcategory = "EdSubcat_Flags";
 
@@ -140,7 +140,7 @@ class CfgVehicles
         author = "Saltyshowmn";
         scope = 2;
         scopeCurator = 2;
-        displayName = "Flag (Task Force Razor)";
+        displayName = "Task Force Razor Flag";
         editorCategory = "EdCat_Signs";
         editorSubcategory = "EdSubcat_Flags";
 
@@ -155,7 +155,7 @@ class CfgVehicles
         author = "Saltyshowmn";
         scope = 2;
         scopeCurator = 2;
-        displayName = "Flag (14th STAG)";
+        displayName = "14th STAG Flag";
         editorCategory = "EdCat_Signs";
         editorSubcategory = "EdSubcat_Flags";
 
@@ -165,6 +165,35 @@ class CfgVehicles
         };
     };
 
+    class JEG73_FLAG: FlagPole_F
+    {
+        author = "Saltyshowmn";
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "73rd JEG Flag";
+        editorCategory = "EdCat_Signs";
+        editorSubcategory = "EdSubcat_Flags";
+
+        class EventHandlers
+        {
+            init = "(_this select 0) setFlagTexture '\insignia_addon\icon\73rd_jeg_flag.paa'";
+        };
+    };
+
+    class JTF_FLAG: FlagPole_F
+    {
+        author = "Saltyshowmn";
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "JTF Flag";
+        editorCategory = "EdCat_Signs";
+        editorSubcategory = "EdSubcat_Flags";
+
+        class EventHandlers
+        {
+            init = "(_this select 0) setFlagTexture '\insignia_addon\icon\jtf_flag.paa'";
+        };
+    };
 };
 
 class CfgMarkerClasses
@@ -221,6 +250,24 @@ class CfgMarkers
         name = "S.T.A.G.";
         icon = "\insignia_addon\icon\stag_marker_ca.paa";
         texture = "\insignia_addon\icon\stag_marker_ca.paa";
+        markerClass = "Saltys_AIO_Markers";
+    };
+
+    class Saltys_73rd_JEG_Marker: flag_Altis
+    {
+        scope = 2;
+        name = "73rd JEG";
+        icon = "\insignia_addon\icon\73rd_jeg_marker_ca.paa";
+        texture = "\insignia_addon\icon\73rd_jeg_marker_ca.paa";
+        markerClass = "Saltys_AIO_Markers";
+    };
+
+    class Saltys_JTF_Marker: flag_Altis
+    {
+        scope = 2;
+        name = "JTF";
+        icon = "\insignia_addon\icon\jtf_marker_ca.paa";
+        texture = "\insignia_addon\icon\jtf_marker_ca.paa";
         markerClass = "Saltys_AIO_Markers";
     };
 };
